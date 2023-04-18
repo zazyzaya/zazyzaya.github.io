@@ -1,0 +1,3 @@
+[submodule "ThreeBody"]
+	path = ThreeBody
+	url = https://github.com/zazyzaya/ThreeBody
