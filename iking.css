@@ -1,11 +1,12 @@
-body {
+html,body {
     font-family: sans-serif;
     margin: 1;
     background-color: #ddd;
+    height: 100%;
 }
 
-#main {
-    height: 92%;
+#vspace {
+    height: 25px;
 }
 
 #infobox {
@@ -13,10 +14,21 @@ body {
     float: left;
     border-radius: 10px;
     padding: 5px;
-    height: 99%;
+    height: 100%;
     width: 20%;
     max-width: 250px;
     color: white;
+}
+
+#header{
+    height: 50px;
+    line-height: 50px;
+    background-color: #033C5A;
+    border-radius: 10px;
+    margin: 5px;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
 }
 
 #infobox img {
@@ -45,8 +57,35 @@ a {
 #body-container{
     width: 75%;
     display: table;
-    height: 100%;
+    min-height: 100%;
     padding-left: 10px;
+    color: #033C5A;
+}
+
+#blog-container{
+    display: table;
+    min-height: 100%;
+    padding-left: 10px;
+    color: #033C5A;
+}
+
+.blog-entry {
+    border: #b5b2b2;
+    border-style: solid;
+    background-color: #bcbbb9;
+    border-radius: 5px;
+    color: #033C5A;
+}
+
+.blog-title {
+    border: #949292;
+    border-bottom: solid;
+    font-weight: bold;
+    color: #033C5A;
+}
+.blog-abstract {
+    font-size: 12;
+    text-decoration: none;
     color: #033C5A;
 }
 
