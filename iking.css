@@ -91,7 +91,7 @@ a {
 
 #body {
     display: table-cell;
-    vertical-align: middle;
+    /*vertical-align: middle;*/
 }
 
 #headshot {
@@ -127,4 +127,33 @@ a {
 
 #footer-right img{
     height: 50px;
+}
+
+#toy-container {
+    height: 100px; 
+    width: 100%; 
+    /*border-style: solid; border-width: 1px; border-color: red;*/
+}
+
+.toy {
+    height: 100px; 
+    width:  100px;
+    display: inline-block;
+    /*border-style: solid; border-width: 1px; border-color: black;*/
+    padding-top: 0
+}
+
+.toy-img {
+    height: 75%; 
+    width: 75%;
+    border-radius: 5px;
+    margin-left: 12.5%; 
+    margin-right: 12.5%; 
+    margin-top: 0px
+}
+
+.toy-name {
+    text-align: center;
+    font-size: 14px;
+    color: #033C5A;
 }
