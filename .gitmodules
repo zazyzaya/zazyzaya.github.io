@@ -4,3 +4,6 @@
 [submodule "WaterSim"]
 	path = WaterSim
 	url = https://github.com/zazyzaya/WaterSim
+[submodule "Boids"]
+	path = Boids
+	url = https://github.com/zazyzaya/Boids
