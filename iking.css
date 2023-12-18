@@ -89,6 +89,10 @@ a {
     color: #033C5A;
 }
 
+.pdf {
+    width: 15px; 
+}
+
 #body {
     display: table-cell;
     /*vertical-align: middle;*/
