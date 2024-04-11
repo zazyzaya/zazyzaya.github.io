@@ -7,3 +7,6 @@
 [submodule "Boids"]
 	path = Boids
 	url = https://github.com/zazyzaya/Boids
+[submodule "harmonograph"]
+	path = harmonograph
+	url = https://github.com/zazyzaya/harmonograph
