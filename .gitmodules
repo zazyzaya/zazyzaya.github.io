@@ -10,3 +10,6 @@
 [submodule "harmonograph"]
 	path = harmonograph
 	url = https://github.com/zazyzaya/harmonograph
+[submodule "ContrailsJS"]
+	path = ContrailsJS
+	url = git@github.com:zazyzaya/ContrailsJS.git
