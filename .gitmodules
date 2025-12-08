@@ -13,3 +13,6 @@
 [submodule "ContrailsJS"]
 	path = ContrailsJS
 	url = git@github.com:zazyzaya/ContrailsJS.git
+[submodule "FractalJS"]
+	path = FractalJS
+	url = git@github.com:zazyzaya/FractalJS.git
