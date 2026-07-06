@@ -1,7 +1,11 @@
-html,body {
+html,body,#main {
     font-family: sans-serif;
+    margin: 0;
+    padding: 0;
     height: 100%;
     background-color: #D9DCE3;
+    display: flex;
+    flex-direction: column;
 }
 
 #main {
@@ -18,8 +22,7 @@ html,body {
 }
 
 #infobox {
-    background-color: #004FA2;
-    float: left;
+    background-color: #182449;
     border-radius: 10px;
     margin-bottom: 5px;
     padding: 5px;
@@ -29,14 +32,41 @@ html,body {
 }
 
 #header{
-    height: 50px;
-    line-height: 50px;
+    min-height: 50px;
     background-color: #E0263c;
     border-radius: 10px;
     margin: 5px;
     color: white;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+}
+
+#header h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 28px;
     text-align: center;
-    vertical-align: middle;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#header h1 mjx-container {
+    margin: 0 0 0 8px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    vertical-align: middle !important;
+}
+
+#middle-content {
+    display: flex;
+    flex: 1; /* Automatically stretches to take up all remaining vertical space */
+    align-items: stretch; /* Forces children (sidebar & main content) to match height */
+    margin: 0 5px;
 }
 
 #infobox img {
@@ -45,12 +75,31 @@ html,body {
     max-width: 150px;
 }
 
+#infobox a.indent-link {
+    display: block;
+    padding-left: 15px;
+}
+
+.code {
+    font-family: "Courier New", Courier, monospace;
+    color: #512D6D;            /* Clean academic purple text */
+    background-color: #FFFFFF; /* White background */
+    border: 1px solid #bcbbb9; /* Slight border to separate it from the gray page background */
+    border-radius: 5px;
+    margin: 10px 0;
+    display: inline-block;     /* Keeps the box snugly wrapped around the text */
+    font-size: 14px;
+    font-weight: bold;
+    white-space: pre-wrap;     /* Preserves code spacing while letting long lines wrap safely */
+}
+
 a {
     text-decoration: none;
 }
 
 #infobox a {
-    color: #961e28;
+    color: #D9DCE3;
+    text-decoration: underline;
 }
 
 #body-container a {
@@ -63,11 +112,10 @@ a {
 }
 
 #body-container{
-    width: 70%;
+    width: 80%;
     padding-left: 10px;
     padding-right: 10px;
     color: #182449;
-    float: right;
 }
 
 #blog-container{
