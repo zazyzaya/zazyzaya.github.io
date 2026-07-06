@@ -1,0 +1,37 @@
+.latex-command-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.latex-command-table th {
+    background-color: #182449; /* AU Intern Navy */
+    color: #FFFFFF;
+    font-weight: bold;
+    text-align: left;
+    padding: 12px;
+}
+
+.latex-command-table td {
+    padding: 12px;
+    border-bottom: 1px solid #D9DCE3; /* AU District Gray */
+    color: #182449;
+    vertical-align: middle;
+}
+
+.latex-command-table td:nth-child(2) {
+    font-family: "Courier New", Courier, monospace;
+    color: #512D6D;            /* Purple text */
+    font-weight: bold;
+    font-size: 14px;
+    white-space: nowrap;       /* Prevents code commands from breaking onto two lines */
+}
+
+/* Zebra striping for readability */
+.latex-command-table tr:nth-child(even) {
+    background-color: #F7F8F9;
+}

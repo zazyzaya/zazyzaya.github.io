@@ -1,0 +1,157 @@
+\documentclass{article}
+\usepackage{mathtools}
+\usepackage{nccmath}
+\usepackage{xcolor}
+\usepackage[normalem]{ulem}
+\usepackage{hyperref}
+\usepackage{centernot}
+
+\oddsidemargin=0pt
+\evensidemargin=0pt
+\topmargin=0in
+\setlength{\textwidth}{6.2in}
+
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{titling}
+\usepackage{amssymb}
+\usepackage{amscd}
+\usepackage{multicol}
+\usepackage{array}
+\usepackage{amsfonts}
+\usepackage{euler}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{subcaption}
+\usepackage{booktabs}
+\usepackage[ruled,vlined,linesnumbered]{algorithm2e}
+
+\newcommand{\IA}{\mathbb{A}}
+\newcommand{\IB}{\mathbb{B}}
+\newcommand{\IC}{\mathbb{C}}
+\newcommand{\ID}{\mathbb{D}}
+\newcommand{\IE}{\mathbb{E}}
+\newcommand{\IF}{\mathbb{F}}
+\newcommand{\IG}{\mathbb{G}}
+\newcommand{\IH}{\mathbb{H}}
+\newcommand{\II}{\mathbb{I}}
+%\renewcommand{\IJ}{\mathbb{J}}
+\newcommand{\IK}{\mathbb{K}}
+\newcommand{\IL}{\mathbb{L}}
+\newcommand{\IM}{\mathbb{M}}
+\newcommand{\IN}{\mathbb{N}}
+\newcommand{\IO}{\mathbb{O}}
+\newcommand{\IP}{\mathbb{P}}
+\newcommand{\IQ}{\mathbb{Q}}
+\newcommand{\IR}{\mathbb{R}}
+\newcommand{\IS}{\mathbb{S}}
+\newcommand{\IT}{\mathbb{T}}
+\newcommand{\IU}{\mathbb{U}}
+\newcommand{\IV}{\mathbb{V}}
+\newcommand{\IW}{\mathbb{W}}
+\newcommand{\IX}{\mathbb{X}}
+\newcommand{\IY}{\mathbb{Y}}
+\newcommand{\IZ}{\mathbb{Z}}
+\newcommand{\excise}[1]{}
+\newcommand{\floor}[1]{\lfloor#1\rfloor}
+\newcommand{\ceil}[1]{\lceil#1\rceil}
+\newcommand{\dx}{\text{ }dx}
+\newcommand{\dy}{\text{ }dy}
+\newcommand{\du}{\text{ }du}
+\newcommand{\dv}{\text{ }dv}
+\newcommand{\dt}{\text{ }dt}
+\newcommand{\df}{\text{ }df}
+\newcommand{\ent}[1]{#1\log #1}
+
+\newcommand{\nlnl}{\newline\newline}
+\newcommand{\brac}[1]{\langle#1\rangle}
+\newcommand{\IRP}{\IR^+}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\la}{\leftarrow}
+\newcommand{\nullset}{\varnothing}
+\newcommand{\emskip}{\enskip\enskip}
+\newcommand{\fourier}{\mathscr{F}}
+\newcommand{\efourier}{e^{-j2\pi ft}}
+\newcommand{\einvforier}{e^{j2 \pi ft}}
+\newcommand{\qed}{\blacksquare}
+\newcommand{\mat}[1]{\begin{bmatrix}#1\end{bmatrix}}
+\newcommand{\ddt}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\laplace}[1]{\mathcal{L}\mat{#1}(s)}
+\newcommand{\invlaplace}[1]{\mathcal{L}^{-1}\mat{#1}(t)}
+\newcommand{\eqspl}[1]{\begin{equation*}\begin{split}#1\end{split}\end{equation*}}
+\newcommand{\red}[1]{{\color{red} #1}}
+\newcommand{\todo}{\red{TODO}}
+\newcommand{\graph}{\mathcal{G}}
+\newcommand{\V}{\mathcal{V}}
+\newcommand{\E}{\mathcal{E}}
+\newcommand{\tab}{\phantom{-- --}}
+\newcommand{\limit}[1]{\underset{#1}{\lim}}
+\newcommand{\plusplus}{{\hspace{-.05em}\raisebox{.2ex}{\relsize{-1}{\hspace{0.2em}\textbf{++}}}}}
+\newcommand{\minusminus}{{\hspace{-.05em}\raisebox{.3ex}{\relsize{-1}{\textbf{\hspace{0.2em}-\hspace{0.1em}-}}}}}
+
+
+% You can add your own commands like this:
+\newcommand{\question}[2]{\noindent\textbf{#1}: #2\\}
+\newcommand{\comment}[1]{}
+
+\setlength{\droptitle}{-10em}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5\baselineskip}
+
+\title{Homework Template}
+\author{Your Name}
+\date{}
+
+\begin{document}
+\maketitle
+\vspace{-5em}
+
+\question{1}{Question goes here}
+Answer goes here.
+
+Use two enters to start a new line
+
+Make an itemized list with the following:
+\begin{itemize}
+    \item [a.] Part one of my answer
+    \item [b.] Part two of my answer
+    \begin{itemize}
+        \item [b.1] You can even have sublists!\
+        \item [b.2] With inline equations $a^2+b^2=c^2$
+        \item [b.3] Or block equations:
+        $$
+        \sum_{i=1}^k i = \frac{k(k+1)}{2}
+        $$
+    \end{itemize}
+    \item [c.] Fill in with the correct answers :)
+\end{itemize}
+
+\question{2}{This question requires pseudocode}
+Use the ``verbatim" environment to write pseudocode
+\begin{verbatim}
+def my_function():
+    print("Hello world!")
+\end{verbatim}
+
+Or if you want to be fancy, use the algorithm environment.
+\begin{algorithm}
+    \caption{My Algorithm}
+    $nums \gets [1,...,100]$\;
+    \For{$i \in nums$}{
+        \If{$i \mod 3 == 0 \land i \mod 5 == 0$}{
+            print(``FizzBuzz")\;
+        } \ElseIf {$i \mod 3 == 0$} {
+            print(``Fizz")\;
+        } \ElseIf {$i \mod 5 == 0$} {
+            print(``Buzz")\;
+        } \Else {
+            print($i$)\;
+        }
+    }
+\end{algorithm}
+
+Documentation here:
+\url{https://www.overleaf.com/learn/latex/Algorithms#The_algorithm2e_package}
+
+\end{document}

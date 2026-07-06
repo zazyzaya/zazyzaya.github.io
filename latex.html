@@ -1,0 +1,116 @@
+<html>
+    <head>
+        <link rel='stylesheet' type='text/css' href='iking.css'>
+        <link rel='stylesheet' type='text/css' href='latex.css'>
+        <meta charset="UTF-8">
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+        <script>
+            window.MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+    </head>
+    <body>
+        <div id="header">
+            <h1>How to $\LaTeX$ </h1>
+        </div>
+        <div id="middle-content">
+            <div id="infobox">
+                <div id="vspace"></div>
+                <a href="index.html"><h2>Home</h2></a>
+                <a href="#intro" class="indent-link"><h3>1. What is $\LaTeX$?</h3></a>
+                <a href="#started" class="indent-link"><h3>2. Getting Started </h3></a>
+                <a href='#simple' class="indent-link"><h3>3. Simple Commands </h3></a>
+                <a href='#advanced' class="indent-link"><h3>4. Fancy Commands </h3></a>
+                <a href='#writing' class="indent-link"><h3>5. Academic Writing </h3></a>
+            </div>
+            <div id="body-container">
+                <h2 id="intro"> 1. What is $\LaTeX$ ? </h2>
+
+                <h2 id="started"> 2. Getting Started </h2>
+                Overleaf <br>
+                Link to my homework template <br>
+                Brief aside about MiKTeX for insane students <br>
+
+                <h2 id="simple"> 3. Some Simple Commands </h2>
+                The main reason you might like to use $\LaTeX$ for your homework assignments is that
+                it makes writing math equations into a computer increadibly easy. You can tell the TeX
+                renderer that you are beginning an "equation environment" using the dollar sign. One dollar
+                sign for in-line equations, two for larger equation blocks. <br>
+                For example, an in-line equation would be written as <span class='code'>\$a^2 + b^2 = c^2\$</span> and rendered as $a^2 + b^2 = c^2$ <br>
+                An equation block will take up an entire line and be centered. We start these with two dollar signs. <br>
+                E.g. <span class='code'>\$\$ \sum_{i=1}^k = \frac{k(k+1)}{2} \$\$</span> becomes
+                $$ \sum_{i=1}^k = \frac{k(k+1)}{2} $$
+
+                Now that we know how to start an equation environment, what do we actually put into it?
+                $\LaTeX$ provides a huge number of useful math commands. Google or ChatGPT are your friend here.
+                The table below provides a noncomprehensive list of useful commands that you may need to use
+                in typesetting your homework:
+
+                <table class="latex-command-table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Command</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Superscripts</td>
+                            <td>\$a^b\$</td>
+                            <td>$a^b$</td>
+                        </tr>
+                        <tr>
+                            <td>Subscripts</td>
+                            <td>\$a_b\$</td>
+                            <td>$a_b$</td>
+                        </tr>
+                        <tr>
+                            <td>Fractions</td>
+                            <td>\$\frac{a}{b}\$</td>
+                            <td>$\frac{a}{b}$</td>
+                        </tr>
+                        <tr>
+                            <td>Greek Letters</td>
+                            <td>\$\gamma \delta \lambda\$<br>\$\Gamma \Delta \Lambda\$</td>
+                            <td>$\gamma \delta \lambda$<br>$\Gamma \Delta \Lambda$</td>
+                        </tr>
+                        <tr>
+                            <td>Set theory<br>(<b>Note</b>: curly braces<br>need to be escaped<br>with a backslash)</td>
+                            <td>\$\cup\$ \$\cap\$ \$\in\$ \$\not \in\$ <br> \$\{x \mid x \in A \cap B \}\$</td>
+                            <td>$\cup$ $\cap$ $\in$ $\not \in$ <br> $\{x \mid x \in A \cap B \}$</td>
+                        </tr>
+                        <tr>
+                            <td>Logic</td>
+                            <td>\$\forall\$ \$\exists\$ <br> \$land\$ \$\lor\$ \$\implies\$</td>
+                            <td>$\forall$ $\exists$ <br> $\land$ $\lor$ $\implies$</td>
+                        </tr>
+                        <tr>
+                            <td>Common functions</td>
+                            <td>\$\sqrt{x}\$, \$\ln{x}\$, \$\log{x}\$, \$\exp{x}\$</td>
+                            <td>$\sqrt{x}$, $\ln{x}$, $\log{x}$, $\exp{x}$</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                As you continue practicing wrating $\LaTeX$ you will inevitably come across new symbols that I
+                forgot to write down above. <a href="https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols">This site</a>
+                has a more comprehensive list than what's written above, or you can always just google "empty set latex"
+                and the answer will come up (<span class="code">\$\emptyset\$</span>, $\emptyset$).
+
+                <h2 id="advanced"> 4. Fancy Commands </h2>
+                Macros <br>
+                Exerpts from my preamble <br>
+                Tikz
+
+                <h2 id="writing"> 5. Acadmic Writing </h2>
+                Citing things <br>
+                Templates <br>
+
+            </div>
+        </div>
+    </body>
+</html>
