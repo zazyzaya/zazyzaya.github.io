@@ -1,0 +1,230 @@
+<html>
+    <head>
+        <link rel='stylesheet' type='text/css' href='iking.css'>
+        <link rel='stylesheet' type='text/css' href='latex.css'>
+        <meta charset="UTF-8">
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+        <script>
+            window.MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+    </head>
+    <body>
+        <div id="header">
+            <h1>How to $\LaTeX$ </h1>
+        </div>
+        <div id="middle-content">
+            <div id="infobox">
+                <div class="sticky-toc-wrapper">
+                    <div id="vspace"></div>
+                    <a href="index.html"><h2>Home</h2></a>
+                    <a href="#header" class="indent-link"><h3>1. What is $\LaTeX$?</h3></a>
+                    <a href="#started" class="indent-link"><h3>2. Getting Started </h3></a>
+                    <a href='#simple' class="indent-link"><h3>3. Simple Commands </h3></a>
+                    <a href='#writing' class="indent-link"><h3>4. Academic Writing </h3></a>
+                    <a href='#advanced' class="indent-link"><h3>5. Fancy Commands </h3></a>
+                </div>
+            </div>
+            <div id="body-container">
+                <h2 id="intro"> 1. What is $\LaTeX$ ? </h2>
+                $\LaTeX$ is a software system that generates PDF documents using a compiler called $\TeX$. You can think of it
+                as analogous to how python runs low-level C code (like $\TeX$), but is written in more concise, human-readable language ($\LaTeX$!).
+                This software makes it very efficient to type mathematical equations, which is why I suggest you learn it.
+                It also makes it very easy to cite papers, insert images, tables, and bibliographies (automatically formatted to MLA, APA, IEEE, etc.),
+                typeset books, write in non-Latin alphabets, and so much more.
+                If you are interested in a career where you will do a lot of technical writing, or even creative writing,
+                learning how to use $\LaTeX$ will help you tremendously. Even if you're not interested in those things,
+                it will help you with your homework assignments in other courses, and probably impress your professors.
+                <b>I don't require that my students use it</b>, but I highly, highly recommend it. Once you've written something
+                using $\LaTeX$, you can never go back to MS Word.
+
+                <h3>Pronunciation</h3>
+                I have embarrassed myself pronouncing this the same way you would pronounce the stretchy rubbery material
+                for too long to allow my students to make the same mistakes as me.
+                The compiler $\TeX$ is named for the Greek word τέχνη (techne), meaning it is properly pronounced
+                like the "tech" in "technology". Leslie <b>La</b>mport bundled his macros into software he
+                called "Lamport's TeX", eventually shortened to $\LaTeX$.
+                <br>Thus, the software name is properly pronounced "la-tek", but when people correct me, they
+                usually call it "lay-tek". I think it's that one.
+
+                <h2 id="started"> 2. Getting Started </h2>
+                <h3>Homework Template</h3>
+                I have written out a small template for homework assignments that contains many macros and
+                imports that I have been building up since my undergraduate years. You can download it below:
+
+                <div class="download-btn-container">
+                    <a href="/files/homework_template.tex" download="homework_template.tex" style="text-decoration: none;">
+                        <button class="download-btn">Download Homework Template</button>
+                    </a>
+                </div>
+
+                You don't have to use it; I don't care how your homework is formatted, as long as it's readable.
+                But, you may find it helpful.
+
+                <h3>Writing and Compiling</h3>
+                The fastest and easiest way to get started using $\LaTeX$ is to make a free account on
+                <a href=https://www.overleaf.com>Overleaf</a>. This website is sort of like
+                Google Drive, but just for $\LaTeX$ projects.
+                Another handy thing about Overleaf is that it will fill in code for you, like a code linter,
+                and if you do something wrong, the error messages are usually pretty helpful.
+                <br><br>You can also download a $\TeX$ compiler on your own, and write documents locally.
+                I would not recommend this route unless you're already familiar with typesetting, but if
+                you want to try it out, I recommend using <a href="https://miktex.org/">MiKTeX</a> as your $\TeX$
+                distribution, and using <a href="https://code.visualstudio.com/">VSCode</a> as your IDE and compiler.
+                If you want to get really fancy, you can even host your projects in a Git repository, which
+                makes collaboration easier (and is how many academic papers were written in the 2000s!).
+                However, I strongly recommend against this if you are just learning. Use <a href=https://www.overleaf.com>Overleaf</a>
+                to get started. It will save you a lot of headaches.
+
+                <h2 id="simple"> 3. Some Simple Commands </h2>
+                The main reason you might like to use $\LaTeX$ for your homework assignments is that
+                it makes writing math equations into a computer incredibly easy. You can tell the TeX
+                renderer that you are beginning an "equation environment" using the dollar sign. One dollar
+                sign for in-line equations, two for larger equation blocks. <br>
+                For example, an in-line equation would be written as <span class='code'>\$a^2 + b^2 = c^2\$</span> and rendered as $a^2 + b^2 = c^2$ <br>
+                An equation block will take up an entire line and be centered. We start these with two dollar signs. <br>
+                E.g. <span class='code'>\$\$ \sum_{i=1}^k = \frac{k(k+1)}{2} \$\$</span> becomes
+                $$ \sum_{i=1}^k = \frac{k(k+1)}{2} $$
+
+                Now that we know how to start an equation environment, what do we actually put into it?
+                $\LaTeX$ provides a huge number of useful math commands. Google or ChatGPT are your friend here.
+                The table below provides a noncomprehensive list of useful commands that you may need to use
+                in typesetting your homework:
+
+                <table class="latex-command-table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Command</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Superscripts<br>(<b>Note</b>: for superscripts longer than one character, wrap them in curly braces.)</td>
+                            <td>\$a^b\$, \$a^{b+c}\$</td>
+                            <td>$a^b$, $a^{b+c}$</td>
+                        </tr>
+                        <tr>
+                            <td>Subscripts<br>(<b>Note</b>: same warning as above)</td>
+                            <td>\$a_b\$, \$x_{i,j}\$</td>
+                            <td>$a_b$, $x_{i,j}$</td>
+                        </tr>
+                        <tr>
+                            <td>Fractions</td>
+                            <td>\$\frac{a}{b}\$</td>
+                            <td>$\frac{a}{b}$</td>
+                        </tr>
+                        <tr>
+                            <td>Greek Letters</td>
+                            <td>\$\gamma \delta \lambda\$<br>\$\Gamma \Delta \Lambda\$</td>
+                            <td>$\gamma \delta \lambda$<br>$\Gamma \Delta \Lambda$</td>
+                        </tr>
+                        <tr>
+                            <td>Set theory<br>(<b>Note</b>: literal curly braces need to be escaped with a backslash)</td>
+                            <td>\$\cup\$ \$\cap\$ \$\in\$ \$\not \in\$ <br> \$\{x \mid x \in A \cap B \}\$</td>
+                            <td>$\cup$ $\cap$ $\in$ $\not \in$ <br> $\{x \mid x \in A \cap B \}$</td>
+                        </tr>
+                        <tr>
+                            <td>Logic</td>
+                            <td>\$\forall\$ \$\exists\$ <br> \$\land\$ \$\lor\$ \$\implies\$</td>
+                            <td>$\forall$ $\exists$ <br> $\land$ $\lor$ $\implies$</td>
+                        </tr>
+                        <tr>
+                            <td>Common functions</td>
+                            <td>\$\sqrt{x}\$, \$\ln{x}\$, <br> \$\log{x}\$, \$\exp{x}\$</td>
+                            <td>$\sqrt{x}$, $\ln{x}$, <br> $\log{x}$, $\exp{x}$</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                As you continue practicing writing $\LaTeX$ you will inevitably come across new symbols that I
+                forgot to write down above. <a href="https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols">This site</a>
+                has a more comprehensive list than what's written above, or you can always just google "empty set latex"
+                and the answer will come up (<span class="code">\$\emptyset\$</span>, $\emptyset$).
+                Another cool resource is <a href="https://detexify.kirelabs.org/">DeTeXify</a>. Just draw the symbol
+                with your mouse, and it will try to find a matching $\LaTeX$ command!
+
+                <h2 id="writing"> 4. Academic Writing </h2>
+                One of the best parts of $\LaTeX$ is how easy it makes academic writing.
+                While you are researching your topic, any time you come across an interesting paper,
+                cite it using BibTeX. There are services that can do this for you, or many journals
+                will offer a BibTeX version when you click the "cite" button next to the paper, or
+                personally, I use the Google Scholar Chrome extension. In any case, your citation
+                will look something like this:<br><br>
+
+                <span class="code">
+    @article{computability,
+        title={On computable numbers,
+            with an application to the Entscheidungsproblem},
+        author={Turing, Alan Mathison and others},
+        journal={J. of Math},
+        volume={58},
+        number={345-363},
+        pages={5},
+        year={1936},
+        publisher={Wiley Online Library}
+    }
+                </span>
+                <br><br>and save it to a file, traditionally called <span class="code">references.bib</span>.
+                The first line of text, after <span class="code">@article{</span>, can be
+                whatever you want. I like to make it something that's easy to remember the paper
+                by. The reason for this, is that later, when you're writing your paper, you can
+                easily cite the reference you've just created in your .bib file by typing out
+                <span class="code">Turing proved that the halting problem is undecidable~\cite{computability}.</span>
+                This will automatically generate an in-line citation for you. At the end of your document,
+                just include the following to automatically generate a bibliography from everything
+                that you cited in the paper: <br><br>
+
+                <span class="code">
+    \bibliographystyle{ieeetr}    % Or whatever format you want
+    \bibliography{references}     % Looks for sources in references.bib
+                </span>
+
+                <br><br>With these two simple files, our output looks something like this:
+
+                <p align="center">
+                <img src="img/ref_example.png">
+                </p>
+
+                No more wrestling with MS Word's "insert citation", or bothering to type them
+                yourself! $\LaTeX$ makes technical writing a breeze!
+
+                <h2 id="advanced"> 5. Fancy Commands </h2>
+                <h3>Macros</h3>
+                If you want to chain a bunch of commands together, or find the default commands clunky,
+                you can always just create your own using the <span class="code">\newcommand</span>
+                command. For example, the default way to write matrices in $\LaTeX$ is annoying.
+                Officially, you're supposed to write out <span class="code">\\begin{bmatrix}a & b \\\ c & d\end{bmatrix}</span>
+                to generate $\begin{bmatrix}a & b \\ c & d\end{bmatrix}$.
+                But personally, I find that annoying. Why isn't it just a single command like <span class="code">\matrix{a & b \\\ c & d}</span>?
+                I don't know. But if there's a will, there's a way. In the preamble (the top part where you import and define things)
+                of the homework template, I did exactly that:
+
+                <br><br>
+                <span class="code">\newcommand{\mat}[1]{\\begin{bmatrix}#1\end{bmatrix}}</span>
+                <br><br>
+
+                The syntax of this command is
+                <br><span class="code">\newcommand{\newCommandName}[How many arguments]{what code to replace it with}</span>
+                <br><br>
+                So when we use the new command <span class="code">\mat{argument}</span>
+                the precompiler replaces it with the value in the final curly braces,
+                and replaces the <span class="code">#1</span> with <span class="code">argument</span>.
+
+                <br><br>
+                We can do this with more than one argument as well. For example, the preamble
+                in the homework template has some calculus macros defined as well (just in case).
+
+                <br><br>
+                <span class="code">\newcommand{\ddt}[2]{\frac{\partial #1}{\partial #2}}</span>
+                <br><br>
+                This displays the derivative of argument 1 with respect to argument 2. For example, <span class="code">\ddt{x}{t}</span>
+                renders as $\frac{\partial x}{\partial t}$.
+            </div>
+        </div>
+    </body>
+</html>

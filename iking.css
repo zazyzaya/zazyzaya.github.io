@@ -86,7 +86,7 @@ html,body,#main {
     background-color: #FFFFFF; /* White background */
     border: 1px solid #bcbbb9; /* Slight border to separate it from the gray page background */
     border-radius: 5px;
-    margin: 10px 0;
+
     display: inline-block;     /* Keeps the box snugly wrapped around the text */
     font-size: 14px;
     font-weight: bold;
