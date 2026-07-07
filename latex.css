@@ -31,7 +31,62 @@
     white-space: nowrap;       /* Prevents code commands from breaking onto two lines */
 }
 
+.latex-command-table td:nth-child(1) {
+    max-width: 75px;
+}
+
+
 /* Zebra striping for readability */
 .latex-command-table tr:nth-child(even) {
     background-color: #F7F8F9;
+}
+
+.download-btn-container {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+}
+
+.download-btn {
+    background-color: #E0263c; /* AU Red */
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.download-btn:hover {
+    background-color: #961e28; /* Deep AU Red on hover */
+    transform: translateY(-1px);
+}
+
+.download-btn:active {
+    transform: translateY(1px);
+}
+
+.sticky-toc-wrapper {
+    position: sticky;
+    top: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Tames the default browser margins on headings inside the sticky wrapper */
+.sticky-toc-wrapper h2,
+.sticky-toc-wrapper h3 {
+    margin: 6px 0; /* Tightens the top and bottom spacing back to normal */
+}
+
+/* Optional: Ensures the top vspace div doesn't add accidental extra padding */
+.sticky-toc-wrapper #vspace {
+    height: 15px;
+}
+
+#body-container h2 {
+    scroll-margin-top: 20px;
 }
