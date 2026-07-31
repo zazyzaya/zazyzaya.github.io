@@ -16,3 +16,6 @@
 [submodule "FractalJS"]
 	path = FractalJS
 	url = git@github.com:zazyzaya/FractalJS.git
+[submodule "Automotons"]
+	path = Automotons
+	url = https://github.com/zazyzaya/Automotons
